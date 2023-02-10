@@ -1,1 +1,1 @@
-I'm learning to write basic shell scripts
+Learning how to use the shell
