@@ -1,1 +1,1 @@
-this directory covers basic shell actions
+This directory covers basic shell actions
