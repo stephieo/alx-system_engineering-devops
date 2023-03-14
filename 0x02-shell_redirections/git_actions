@@ -1,1 +1,5 @@
-#!/bo
+#!/bin/bash
+git add .
+git status
+read commitmsg
+git commit -m "$commitmsg"
