@@ -1,0 +1,18 @@
+total 52
+drwxr-xr-x 3 root root 321 Mar 15 03:49 .
+drwxr-xr-x 6 root root 121 Mar 10 10:37 ..
+-rwxr--r-- 1 root root  36 Mar 14 07:18 0-hello_world
+-rwxr--r-- 1 root root  28 Mar 14 07:50 1-confused_smiley
+-rwxr--r-- 1 root root  28 Mar 14 07:56 2-hellofile
+-rwxr--r-- 1 root root  39 Mar 14 08:12 3-twofiles
+-rwxr--r-- 1 root root  34 Mar 14 08:26 4-lastlines
+-rwxr--r-- 1 root root  35 Mar 14 08:32 5-firstlines
+-rwxr--r-- 1 root root  40 Mar 14 09:11 6-third_line
+-rwxr--r-- 1 root root  82 Mar 15 03:41 7-file
+-rwxr--r-- 1 root root  37 Mar 15 03:48 8-cwd_state
+drwxr-xr-x 2 root root   6 Feb 14 21:29 anotherrando.js
+-rw-r--r-- 1 root root  12 Mar 15 03:41 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rwxr--r-- 1 root root  84 Mar 14 08:23 git_actions
+-rw-r--r-- 1 root root 125 Mar 14 08:38 iacta
+-rw-r--r-- 1 root root   0 Mar 15 03:49 ls_cwd_content
+-rw-r--r-- 1 root root  54 Mar 14 06:27 README.md
