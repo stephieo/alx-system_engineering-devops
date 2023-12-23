@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+# using cut command to format output of ls command
+content=$(ls)
+
+for i in $content
+do
+    echo "$i" | cut -d "-" -f2
+done
