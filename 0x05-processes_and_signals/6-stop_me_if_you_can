@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# ends `4-to_infinity_and_beyond`
+
+pkill -f -SIGTERM 4-to_infinity_and_beyond

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# sends SIGTERM to `7-highlander`
+
+pkill -f -SIGTERM 7-highlander
