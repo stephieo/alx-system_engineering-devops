@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# while loop with nested if..elif..else printing lines of text 20 times
+
+i=1
+while [ $i -le 20 ]
+do
+    echo "$i"
+    case $i in
+        "4")
+            echo "bad luck from China"
+            ;;
+        "8")
+            echo "bad luck from Japan"
+            ;;
+        "17")
+            echo "bad luck from Italy"
+            ;;
+        *)    
+            ;;
+    esac
+
+    i=$(( i+1 ))
+done
