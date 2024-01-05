@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-#bash script to run th ping command on a given IP address
-if [ "$input" == "" ];
+# bash script to run the ping command on a given IP address
+if [ "$1" == "" ];
 then
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
-	ping -c 5 "$input"
+	ping -c 5 "$1"
 fi
