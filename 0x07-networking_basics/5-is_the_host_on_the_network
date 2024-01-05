@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#bash script to run th ping command on a given IP address
 if [ "$input" == "" ];
 then
 	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
