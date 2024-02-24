@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+PRIV_KEY="school"
+PASS="betty"
+
+ssh-keygen -f "$PRIV_KEY" -N '$PASS'
