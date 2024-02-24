@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# script to login to remote server using private key
 ssh ubuntu@34.207.83.139 -i ~/.ssh/school

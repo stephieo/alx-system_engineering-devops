@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# script to generate ssh key pair with specific name
 PRIV_KEY="school"
 PASS="betty"
 
