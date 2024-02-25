@@ -3,4 +3,4 @@
 PRIV_KEY="school"
 PASS="betty"
 
-ssh-keygen -b 4096 -f "$PRIV_KEY" -N '$PASS'
+ssh-keygen -b 4096 -f "$PRIV_KEY" -N "$PASS"
