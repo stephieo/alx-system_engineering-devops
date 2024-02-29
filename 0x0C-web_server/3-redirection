@@ -1,1 +1,16 @@
 #!/usr/bin/env bash
+# this bash script sets up a nginx and congfigures a redirect
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# ENABLING FIREWALL RULES
+sudo ufw allow 'Nginx HTTP'
+
+echo "Hello World!" |sudo tee /var/www/html/index.nginx-debian.html
+
+sudo sed -i "/fastcgi_pass 127.0.0.1:9000;/a\\
+        location /redirect_me {\\
+                return 302 https://www.youtube.com/watch?v=QH2-TGUlwu4;\\
+        }" /etc/nginx/sites-available/default
+
+sudo service nginx restart
