@@ -9,7 +9,7 @@ sudo ufw allow 'Nginx HTTP'
 # sudo ufw enable
 
 # create error webpage and default page
-echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
 echo "Hello World!" |sudo tee /var/www/html/index.nginx-debian.html
 
 nginx_setup="server {
@@ -21,13 +21,20 @@ nginx_setup="server {
     server_name _;
 
     location / {
-            try_files $uri $uri/ =404;
+            try_files \$uri \$uri/ =404;
     }
 
-    error_page 404 /custom_404.html;
-    location  /custom_404.html {
-        root /var/www/html/;
+    location /redirect_me {
+                return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+    }
+
+    error_page 404 /404.html;
+    location  /404.html {
+        root /var/www/html;
         internal;
     }
 
 }"
+
+echo -e "$nginx_setup" | sudo tee /etc/nginx/sites-available/default
+sudo service nginx restart
