@@ -1,1 +1,33 @@
 #!/usr/bin/env bash
+# This is a bash script to make a custom 404 error page
+sudo apt-get update
+sudo apt-get install -y nginx
+
+# ENABLING FIREWALL RULES
+sudo ufw allow 'Nginx HTTP'
+# sudo ufw allow 'OpenSSH'
+# sudo ufw enable
+
+# create error webpage and default page
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+echo "Hello World!" |sudo tee /var/www/html/index.nginx-debian.html
+
+nginx_setup="server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    server_name _;
+
+    location / {
+            try_files $uri $uri/ =404;
+    }
+
+    error_page 404 /custom_404.html;
+    location  /custom_404.html {
+        root /var/www/html/;
+        internal;
+    }
+
+}"
