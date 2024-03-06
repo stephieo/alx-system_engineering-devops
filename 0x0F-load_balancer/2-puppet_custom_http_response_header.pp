@@ -1,12 +1,15 @@
 # puppet file to automate configuration of Nginx server (http response)
 
 exec { 'apt-update':
-  command => '/usr/bin/apt-get -y update',
-  path    => ['/usr/bin', '/bin'],
+  command => 'sudo apt-get -y update',
+  provider=> shell,
+  before  => Package['nginx']
+#   path    => ['/usr/bin', '/bin'],
 }
 
 package { 'nginx':
   ensure => installed,
+  before  => Package['install_nginx']
 }
 
 file { '/var/www/html/index.html':
