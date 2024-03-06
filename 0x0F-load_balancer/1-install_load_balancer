@@ -21,7 +21,7 @@ backend webservers
     server 234523-web-02 100.25.222.179:80 check
 "
 sudo cp -a /etc/haproxy/haproxy.cfg{,.orig}
-sudo echo "$balancer" >> /etc/haproxy/haproxy.cfg
+echo "$balancer" |sudo tee /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
 
