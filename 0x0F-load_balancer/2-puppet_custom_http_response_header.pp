@@ -9,7 +9,7 @@ exec { 'apt-update':
 
 package { 'nginx':
   ensure => installed,
-  before  => Package['install_nginx']
+  require   => Exec['update'],
 }
 
 file { '/var/www/html/index.html':
