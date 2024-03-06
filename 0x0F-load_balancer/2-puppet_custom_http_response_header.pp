@@ -1,3 +1,5 @@
+# puppet file to automate configuration of Nginx server (http response)
+
 exec { 'apt-update':
   command => '/usr/bin/apt-get -y update',
   path    => ['/usr/bin', '/bin'],
