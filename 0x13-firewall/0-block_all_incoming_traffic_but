@@ -5,7 +5,7 @@ sudo ufw disable
 sudo default deny incoming
 sudo default allow outgoing
 sudo ufw allow 22/tcp
-sudo ufw allow 442/tcp
+sudo ufw allow 44333/tcp
 sudo ufw allow 80/tcp
 sudo ufw enable
 sudo ufw status
