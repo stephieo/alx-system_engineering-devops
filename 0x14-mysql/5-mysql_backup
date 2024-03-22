@@ -1,1 +1,11 @@
 #!/usr/bin/env bash
+# creates a backup for servers
+# create mySQL dump
+sudo mysqlsump -u root tyrell_corp > backup.sql
+
+# create cpmpressed file of dump
+FILE_NAME=$(date +%d-%m-%Y)
+EXT=".tar.gz"
+tar -czvf "${FILE_NAME}${EXT}" backup.sql
+
+

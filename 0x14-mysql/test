@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+FORMATTED_DATE=$(date +%m-%d-%Y)
+EXT=".PY"
+echo "Formatted date: ${FORMATTED_DATE}${EXT}"
+
