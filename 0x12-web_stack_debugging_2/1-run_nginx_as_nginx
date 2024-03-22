@@ -1,1 +1,11 @@
 #!/usr/bin/env bash
+# fix a web server to run as the nginx user listening on port 8080
+
+#start nginx and check which user is's running as
+service nginx start
+ps aux |grep aux
+cat /etc/nginx/nginx.conf
+
+# replace user and listening port in nginx.conf
+sed -i "s/#user www-data;/user nginx;/" /etc/nginx/nginx.conf
+sed -i "s/80/8080/" /etc/nginx/sites-available/default
