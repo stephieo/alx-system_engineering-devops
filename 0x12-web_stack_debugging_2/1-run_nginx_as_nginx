@@ -3,7 +3,6 @@
 
 #start nginx and check which user is's running as
 service nginx start
-ps aux |grep aux
 cat /etc/nginx/nginx.conf
 
 # replace user and listening port in nginx.conf
