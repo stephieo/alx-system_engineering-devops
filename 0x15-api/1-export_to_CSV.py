@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" returns information about employee TODO list progress in csv """
+""" exports information about employee TODO list progress in csv """
 import csv
 import requests
 from sys import argv

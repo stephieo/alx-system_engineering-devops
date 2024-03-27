@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" returns information about employee TODO list progress in csv format """
+""" exports information about employee TODO list progress in json format """
 import json
 import requests
 from sys import argv
@@ -9,7 +9,7 @@ if __name__ == "__main__":
     user_todos = f"https://jsonplaceholder.typicode.com/users/{argv[1]}/todos"
     todo_response = (requests.get(user_todos)).json()
 
-    # accessing username
+    # accessing usernames
     user_collection = "https://jsonplaceholder.typicode.com/users/"
     user_data = user_collection + argv[1]
     response = (requests.get(user_data)).json()
