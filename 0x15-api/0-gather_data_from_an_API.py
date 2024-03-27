@@ -21,8 +21,8 @@ if __name__ == "__main__":
             NUMBER_OF_DONE_TASKS += 1
         TOTAL_NUMBER_OF_TASKS += 1
 
-    print(f"Employee {EMPLOYEE_NAME} is done with tasks
-          ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}): ")
+    print(f"""Employee {EMPLOYEE_NAME} is done with tasks
+          ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}): """)
     for item in todo_response:
         if item['completed'] is True:
             print(f"\t{item['title']}")
