@@ -27,5 +27,5 @@ if __name__ == "__main__":
     user_dict = {item['userId']: task_list}
     print(user_dict)
 
-with open(f"{item['userId']}.json", 'w') as file:
-    json.dump(user_dict, file)
+    with open(f"{argv[1]}.json", 'w') as file:
+        json.dump(user_dict, file)
