@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """ returns information about employee TODO list progress """
-from sys import argv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
     user_collection = "https://jsonplaceholder.typicode.com/users/"
-    if argv[1]:
-        user_data = user_collection + argv[1]
+    user_data = user_collection + argv[1]
 
     response = (requests.get(user_data)).json()
     EMPLOYEE_NAME = response['name']
@@ -21,8 +20,8 @@ if __name__ == "__main__":
             NUMBER_OF_DONE_TASKS += 1
         TOTAL_NUMBER_OF_TASKS += 1
 
-    print(f"""Employee {EMPLOYEE_NAME} is done with tasks
-          ({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}): """)
+    print(f"Employee {EMPLOYEE_NAME} is done with tasks"
+          + f"({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}): ")
     for item in todo_response:
         if item['completed'] is True:
             print(f"\t{item['title']}")
