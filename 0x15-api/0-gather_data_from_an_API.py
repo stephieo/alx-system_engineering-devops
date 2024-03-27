@@ -24,4 +24,4 @@ if __name__ == "__main__":
           + f"({NUMBER_OF_DONE_TASKS}/{TOTAL_NUMBER_OF_TASKS}): ")
     for item in todo_response:
         if item['completed'] is True:
-            print(f"\t{item['title']}")
+            print(f"\t {item['title']}")
