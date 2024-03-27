@@ -26,7 +26,6 @@ if __name__ == "__main__":
             task_list.append(task_dict)
         # update master dictionary
         employee_dict[user['id']] = task_list
-    print(employee_dict)
 
     with open(f"todo_all_employees.json", 'w') as file:
         json.dump(employee_dict, file)
