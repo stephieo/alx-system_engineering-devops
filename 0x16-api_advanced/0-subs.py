@@ -34,7 +34,7 @@ def number_of_subscribers(subreddit):
     # Query
     OAUTH_ENDPOINT = "https://oauth.reddit.com"
     response = requests.get(OAUTH_ENDPOINT + f"/r/{subreddit}/about",
-                            headers=headers)
+                            headers=headers, allow_redirects=False)
 
     if response.status_code != 200:
         print("ERRORR!", response.status_code)
