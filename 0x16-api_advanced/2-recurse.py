@@ -8,7 +8,7 @@ import requests
 import requests.auth
 
 
-def recurse(subreddit, hot_list=[], after):
+def recurse(subreddit, hot_list=[], after=""):
     """ return a list of all the hot posts
         in a given subreddit
     """
