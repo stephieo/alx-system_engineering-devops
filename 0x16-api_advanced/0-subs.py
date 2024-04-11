@@ -2,10 +2,10 @@
 """ script to query Reddit API and
 return the number of users in given subreddit
 """
-import requests
-import requests.auth
 from client_secrets import USERNAME, PASSWORD, CLIENT_ID, CLIENT_SECRET
 import json
+import requests
+import requests.auth
 
 
 def number_of_subscribers(subreddit):
